@@ -1,6 +1,6 @@
-# ng2-lite-boilerplate
+# ng2-arc-component
 
-Extremly light boiler plate for Angular 2
+Extremely light boiler plate for Angular 2
 
 ### Install
 
