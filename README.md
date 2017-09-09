@@ -1,6 +1,6 @@
 # ng2-arc-component
 
-Extremely light boiler plate for Angular 2
+Loading arc component
 
 ### Install
 
