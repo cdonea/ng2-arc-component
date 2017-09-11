@@ -1,0 +1,9 @@
+<div>
+    <h1>Circular score indicator</h1>
+
+    <div>{{score ? 'Your score: ' + score : ''}}</div>
+    
+    <div arc-component></div>
+
+    <input type="button" value="Show me the score" (click)="showScore()">
+</div>
