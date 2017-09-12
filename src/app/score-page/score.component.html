@@ -1,9 +1,8 @@
 <div>
     <h1>Circular score indicator, generated randomly </h1>
-    <h5>Refresh page for more values</h5>
-    <div>{{score ? 'Your score: ' + score : ''}}</div>
-    
+    <div>{{score ? 'Your score (the actual value from api): ' + score : ''}}</div>
+    <div *ngIf="score" > The score randomly generated </div>  
     <div *ngIf="score" activated="!!score" arc-component></div>
 
-    <input type="button" value="Show me the score from api" (click)="showScore()">
+    <input type="button" value="Show me the score" (click)="showScore()">
 </div>
