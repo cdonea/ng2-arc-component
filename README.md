@@ -24,6 +24,3 @@ npm start
 ```
 npm test
 ```
-
-Original source
-https://angular.io/guide/webpack#test-configuration
