@@ -3,7 +3,7 @@
     <h5>Refresh page for more values</h5>
     <div>{{score ? 'Your score: ' + score : ''}}</div>
     
-    <div arc-component></div>
+    <div *ngIf="score" activated="!!score" arc-component></div>
 
     <input type="button" value="Show me the score from api" (click)="showScore()">
 </div>

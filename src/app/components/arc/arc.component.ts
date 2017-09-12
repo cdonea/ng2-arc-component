@@ -9,11 +9,20 @@ import { OnInit, Component, Input } from '@angular/core';
 export class ArcComponent implements OnInit{
     public dataProgress: number = 0;
     public scorePercentage: number; // Can't add score yet
+    @Input() activated: boolean = false;
 
     constructor() {}
     
     ngOnInit() {
-        this.randomize();
+        
+    }
+    ngOnChanges() {
+        if(this.activated) {
+            setTimeout(() => {
+                this.randomize();
+            }, 1000)
+            
+        }
     }
 
     randomize = function() {
