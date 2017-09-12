@@ -22,11 +22,17 @@ export class ArcComponent implements OnInit{
     }
     
     getRandomNumber() { 
-        return Math.floor(Math.random() * 700);
+        let number = Math.floor(Math.random() * 700);
+        console.log(number);
+        
+        return number;
     }
 
     getRandomPercentage(random: number) {
-        return Math.floor(random * 100 / 700); 
+        let percentage = Math.floor(random * 100 / 700);
+        console.log(percentage);
+        
+        return percentage; 
     }
     
 }
