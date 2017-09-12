@@ -43,7 +43,11 @@ module.exports = {
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw-loader'
+        loader: 'to-string-loader!raw-loader'
+      },
+      {
+          test: /\.less$/,
+          loader: 'to-string-loader!style-loader!css-loader!less-loader'
       }
     ]
   },

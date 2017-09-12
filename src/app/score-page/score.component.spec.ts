@@ -66,7 +66,7 @@ describe('ScoreComponent', () => {
         expect(comp.score).toBe(null);
     });
 
-    fit('should have the score after receiving data successfully', fakeAsync(inject([ScoreService], (scoreService: ScoreService) => {
+    it('should have the score after receiving data successfully', fakeAsync(inject([ScoreService], (scoreService: ScoreService) => {
         let spy = spyOn(scoreService, 'getScore')
             .and.returnValue(Promise.resolve(mockSuccessResponse));
 
@@ -82,7 +82,7 @@ describe('ScoreComponent', () => {
         });
     })));
 
-    fit('should display an error message if receiving data has failed', async(inject([ScoreService], (scoreService: ScoreService)  => {
+    it('should display an error message if receiving data has failed', async(inject([ScoreService], (scoreService: ScoreService)  => {
         spyOn(scoreService, 'getScore')
             .and.returnValue(Promise.reject(mockErrorResponse));
 
@@ -90,7 +90,6 @@ describe('ScoreComponent', () => {
 
         fixture.whenStable().then(() => {
             comp.showScore();
-            // tick(200);
             fixture.detectChanges();
             expect(scoreService.getScore).toHaveBeenCalled();
             expect(comp.score).toBe(null);

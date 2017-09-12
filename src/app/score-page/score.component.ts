@@ -20,13 +20,11 @@ export class ScoreComponent implements OnInit{
         this.scoreService.getScore()
         .then((response) => {
             let jsonResponse = response.json().data; 
-            console.log('******success');
             this.score =  jsonResponse.creditReportInfo ? jsonResponse.creditReportInfo.score : -1;
         })
         .catch((err) => {
-            //handle error 
+            // TO DO: handle error code for real app
             this.score = null;
-            console.log('******err');
         });
     }
 

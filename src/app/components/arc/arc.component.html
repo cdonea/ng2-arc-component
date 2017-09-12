@@ -1,11 +1,23 @@
-<div class="col-md-3 col-sm-6">
-    <div class="progress blue">
-        <span class="progress-left">
-            <span class="progress-bar"></span>
-        </span>
-        <span class="progress-right">
-            <span class="progress-bar"></span>
-        </span>
-        <div class="progress-value">90%</div>
-    </div>
+<div class="radial-progress" [attr.data-progress]="dataProgress">
+	<div class="circle">
+		<div class="mask full">
+			<div class="fill"></div>
+		</div>
+		<div class="mask half">
+			<div class="fill"></div>
+			<div class="fill fix"></div>
+		</div>
+	</div>
+	<div class="inset">
+		<div class="percentage">
+			<div class="numbers">
+			  <span class="inner-text-container">
+         <div class="inner-percentage">{{scorePercentage}}</div>
+         <div class="inner-text">
+           out of 700
+         </div>
+			  </span>
+			</div>
+		</div>
+	</div>
 </div>
